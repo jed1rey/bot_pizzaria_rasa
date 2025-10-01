@@ -1,0 +1,44 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-borda",
+      "2": "I-borda",
+      "3": "L-borda",
+      "4": "U-borda",
+      "5": "B-ingrediente",
+      "6": "I-ingrediente",
+      "7": "L-ingrediente",
+      "8": "U-ingrediente",
+      "9": "B-sabor",
+      "10": "I-sabor",
+      "11": "L-sabor",
+      "12": "U-sabor",
+      "13": "B-tamanho",
+      "14": "I-tamanho",
+      "15": "L-tamanho",
+      "16": "U-tamanho",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-borda": 1,
+      "I-borda": 2,
+      "L-borda": 3,
+      "U-borda": 4,
+      "B-ingrediente": 5,
+      "I-ingrediente": 6,
+      "L-ingrediente": 7,
+      "U-ingrediente": 8,
+      "B-sabor": 9,
+      "I-sabor": 10,
+      "L-sabor": 11,
+      "U-sabor": 12,
+      "B-tamanho": 13,
+      "I-tamanho": 14,
+      "L-tamanho": 15,
+      "U-tamanho": 16,
+      "O": 0
+    },
+    "num_tags": 17
+  }
+]

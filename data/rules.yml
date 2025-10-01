@@ -1,0 +1,67 @@
+version: "3.1"
+
+rules:
+
+- rule: Saudacao inicial
+  steps:
+  - intent: saudacao
+  - action: utter_saudacao
+
+- rule: Horario e perguntar pedido
+  steps:
+  - intent: horario_funcionamento
+  - action: utter_horario
+  - action: utter_quer_fazer_pedido
+
+- rule: Fazer pedido a partir da pergunta
+  steps:
+  - intent: fazer_pedido
+  - action: utter_pedir_sabor
+
+- rule: Sempre validar sabor
+  steps:
+  - intent: informar_sabor_pizza
+  - action: action_validar_sabor
+  - action: utter_pedir_tamanho
+
+- rule: Validar tamanho
+  steps:
+  - intent: informar_tamanho_pizza
+  - action: action_validar_tamanho
+  - action: utter_pedir_borda
+
+- rule: Perguntar ingrediente extra (após borda)
+  steps:
+  - intent: informar_tipo_borda
+  - action: action_ask_ingrediente
+
+- rule: Registrar ingrediente extra quando informado
+  condition:
+  - slot_was_set:
+    - esperando_ingrediente: true
+  steps:
+  - intent: informar_ingrediente_extra
+  - action: action_registrar_ingrediente_extra
+
+- rule: Registrar 'não' como sem ingrediente
+  condition:
+  - slot_was_set:
+    - esperando_ingrediente: true
+  steps:
+  - intent: negar_ingrediente
+  - action: action_registrar_ingrediente_extra
+
+- rule: Confirmar pedido
+  steps:
+  - intent: confirmar_pedido
+  - action: utter_agradecer
+
+- rule: Despedida sempre despedir
+  steps:
+  - intent: despedida
+  - action: utter_despedida
+
+- rule: Cancelamento global
+  steps:
+  - intent: cancelar_pedido
+  - action: utter_cancelar_pedido

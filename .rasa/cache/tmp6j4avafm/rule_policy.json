@@ -1,0 +1,47 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"cancelar_pedido\"}}]": "utter_cancelar_pedido",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"cancelar_pedido\"}}, {\"prev_action\": {\"action_name\": \"utter_cancelar_pedido\"}, \"user\": {\"intent\": \"cancelar_pedido\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"informar_tipo_borda\"}}]": "action_ask_ingrediente",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"informar_tipo_borda\"}}, {\"prev_action\": {\"action_name\": \"action_ask_ingrediente\"}, \"user\": {\"intent\": \"informar_tipo_borda\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"despedida\"}}]": "utter_despedida",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"despedida\"}}, {\"prev_action\": {\"action_name\": \"utter_despedida\"}, \"user\": {\"intent\": \"despedida\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"informar_tamanho_pizza\"}}]": "action_validar_tamanho",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"informar_tamanho_pizza\"}}, {\"prev_action\": {\"action_name\": \"action_validar_tamanho\"}, \"user\": {\"intent\": \"informar_tamanho_pizza\"}}]": "utter_pedir_borda",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"informar_tamanho_pizza\"}}, {\"prev_action\": {\"action_name\": \"action_validar_tamanho\"}, \"user\": {\"intent\": \"informar_tamanho_pizza\"}}, {\"prev_action\": {\"action_name\": \"utter_pedir_borda\"}, \"user\": {\"intent\": \"informar_tamanho_pizza\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"fazer_pedido\"}}]": "utter_pedir_sabor",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"fazer_pedido\"}}, {\"prev_action\": {\"action_name\": \"utter_pedir_sabor\"}, \"user\": {\"intent\": \"fazer_pedido\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"confirmar_pedido\"}}]": "utter_agradecer",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"confirmar_pedido\"}}, {\"prev_action\": {\"action_name\": \"utter_agradecer\"}, \"user\": {\"intent\": \"confirmar_pedido\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"horario_funcionamento\"}}]": "utter_horario",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"horario_funcionamento\"}}, {\"prev_action\": {\"action_name\": \"utter_horario\"}, \"user\": {\"intent\": \"horario_funcionamento\"}}]": "utter_quer_fazer_pedido",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"horario_funcionamento\"}}, {\"prev_action\": {\"action_name\": \"utter_horario\"}, \"user\": {\"intent\": \"horario_funcionamento\"}}, {\"prev_action\": {\"action_name\": \"utter_quer_fazer_pedido\"}, \"user\": {\"intent\": \"horario_funcionamento\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"informar_sabor_pizza\"}}]": "action_validar_sabor",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"informar_sabor_pizza\"}}, {\"prev_action\": {\"action_name\": \"action_validar_sabor\"}, \"user\": {\"intent\": \"informar_sabor_pizza\"}}]": "utter_pedir_tamanho",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"informar_sabor_pizza\"}}, {\"prev_action\": {\"action_name\": \"action_validar_sabor\"}, \"user\": {\"intent\": \"informar_sabor_pizza\"}}, {\"prev_action\": {\"action_name\": \"utter_pedir_tamanho\"}, \"user\": {\"intent\": \"informar_sabor_pizza\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"esperando_ingrediente\": [1.0, 1.0]}, \"user\": {\"intent\": \"negar_ingrediente\"}}]": "action_registrar_ingrediente_extra",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"esperando_ingrediente\": [1.0, 1.0]}, \"user\": {\"intent\": \"negar_ingrediente\"}}, {\"prev_action\": {\"action_name\": \"action_registrar_ingrediente_extra\"}, \"slots\": {\"esperando_ingrediente\": [1.0, 1.0]}, \"user\": {\"intent\": \"negar_ingrediente\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"saudacao\"}}]": "utter_saudacao",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"saudacao\"}}, {\"prev_action\": {\"action_name\": \"utter_saudacao\"}, \"user\": {\"intent\": \"saudacao\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"esperando_ingrediente\": [1.0, 1.0]}, \"user\": {\"intent\": \"informar_ingrediente_extra\"}}]": "action_registrar_ingrediente_extra",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"esperando_ingrediente\": [1.0, 1.0]}, \"user\": {\"intent\": \"informar_ingrediente_extra\"}}, {\"prev_action\": {\"action_name\": \"action_registrar_ingrediente_extra\"}, \"slots\": {\"esperando_ingrediente\": [1.0, 1.0]}, \"user\": {\"intent\": \"informar_ingrediente_extra\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"despedida\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"esperando_ingrediente\": [1.0, 1.0]}, \"user\": {\"intent\": \"negar_ingrediente\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"cancelar_pedido\"}}, {\"prev_action\": {\"action_name\": \"utter_cancelar_pedido\"}, \"user\": {\"intent\": \"cancelar_pedido\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"despedida\"}}, {\"prev_action\": {\"action_name\": \"utter_despedida\"}, \"user\": {\"intent\": \"despedida\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"cancelar_pedido\"}}]",
+      "predicting default action with intent session_start",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"esperando_ingrediente\": [1.0, 1.0]}, \"user\": {\"intent\": \"informar_ingrediente_extra\"}}, {\"prev_action\": {\"action_name\": \"action_registrar_ingrediente_extra\"}, \"slots\": {\"esperando_ingrediente\": [1.0, 1.0]}, \"user\": {\"intent\": \"informar_ingrediente_extra\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"esperando_ingrediente\": [1.0, 1.0]}, \"user\": {\"intent\": \"informar_ingrediente_extra\"}}]",
+      "predicting default action with intent restart",
+      "predicting default action with intent back",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"esperando_ingrediente\": [1.0, 1.0]}, \"user\": {\"intent\": \"negar_ingrediente\"}}, {\"prev_action\": {\"action_name\": \"action_registrar_ingrediente_extra\"}, \"slots\": {\"esperando_ingrediente\": [1.0, 1.0]}, \"user\": {\"intent\": \"negar_ingrediente\"}}]"
+    ]
+  }
+}

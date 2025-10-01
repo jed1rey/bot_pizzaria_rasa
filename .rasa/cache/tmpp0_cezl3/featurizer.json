@@ -1,0 +1,77 @@
+{
+  "type": "MaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "agradecer": 0,
+        "back": 1,
+        "cancelar_pedido": 2,
+        "confirmar_pedido": 3,
+        "despedida": 4,
+        "fazer_pedido": 5,
+        "horario_funcionamento": 6,
+        "informar_ingrediente_extra": 7,
+        "informar_sabor_pizza": 8,
+        "informar_tamanho_pizza": 9,
+        "informar_tipo_borda": 10,
+        "negar_ingrediente": 11,
+        "nlu_fallback": 12,
+        "out_of_scope": 13,
+        "restart": 14,
+        "saudacao": 15,
+        "session_start": 16
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "action_validar_sabor": 13,
+        "action_validar_tamanho": 14,
+        "action_ask_ingrediente": 15,
+        "action_registrar_ingrediente_extra": 16,
+        "utter_agradecer": 17,
+        "utter_ask_ingrediente_extra": 18,
+        "utter_cancelar_pedido": 19,
+        "utter_confirmar_pedido": 20,
+        "utter_despedida": 21,
+        "utter_horario": 22,
+        "utter_ingrediente_registrado": 23,
+        "utter_no_ingrediente": 24,
+        "utter_pedir_borda": 25,
+        "utter_pedir_sabor": 26,
+        "utter_pedir_tamanho": 27,
+        "utter_quer_fazer_pedido": 28,
+        "utter_saudacao": 29
+      },
+      "entities": {
+        "borda": 0,
+        "ingrediente": 1,
+        "sabor": 2,
+        "tamanho": 3
+      },
+      "slots": {
+        "sabor_0": 0,
+        "tamanho_0": 1,
+        "borda_0": 2,
+        "ingrediente_0": 3,
+        "esperando_ingrediente_0": 4,
+        "esperando_ingrediente_1": 5
+      },
+      "active_loop": {}
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}

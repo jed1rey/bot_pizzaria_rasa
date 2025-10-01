@@ -1,0 +1,105 @@
+version: "3.1"
+
+nlu:
+- intent: saudacao
+  examples: |
+    - oi
+    - olá
+    - bom dia
+    - boa tarde
+    - boa noite
+    - i ae?
+
+- intent: horario_funcionamento
+  examples: |
+    - qual é o horário de funcionamento?
+    - que horas vocês abrem?
+    - até que horas estão abertos?
+    - horário de funcionamento
+    - vocês estão abertos hoje?
+
+- intent: fazer_pedido
+  examples: |
+    - Gostaria de uma pizza
+    - Quero fazer um pedido
+    - Gostaria de algo
+
+- intent: informar_sabor_pizza
+  examples: |
+    - de [calabresa](sabor)
+    - com [mussarela](sabor)
+    - [frango](sabor)
+    - quero uma [portuguesa](sabor)
+
+- intent: informar_tamanho_pizza
+  examples: |
+    - quero uma pizza [média](tamanho)
+    - [média](tamanho)
+    - [pequena](tamanho)
+    - uma [grande](tamanho)
+
+- intent: informar_tipo_borda
+  examples: |
+    - com [borda recheada](borda)
+    - [borda fina](borda)
+    - [borda vulcão](borda)
+    - quero uma pizza com [borda recheada](borda)
+    - [sem borda](borda) por favor
+    - borda [recheada](borda)
+    - borda [fina](borda)
+    - [sem](borda) borda
+
+- intent: informar_ingrediente_extra
+  examples: |
+    - com [milho](ingrediente)
+    - quero [milho](ingrediente) extra
+    - com [bacon](ingrediente)
+    - por favor adicione [catupiry](ingrediente)
+    - [azeitona](ingrediente)
+
+- intent: negar_ingrediente
+  examples: |
+    - não
+    - nenhum
+    - sem
+    - sem ingrediente extra
+    - não quero ingrediente extra
+
+- intent: confirmar_pedido
+  examples: |
+    - sim
+    - claro
+    - com certeza
+    - isso
+    - ok
+    - sim, é isso mesmo
+    - isso mesmo
+
+- intent: cancelar_pedido
+  examples: |
+    - não quero mais
+    - não, obrigado
+    - não, não quero
+    - não quero mais
+
+- intent: agradecer
+  examples: |
+    - obrigado
+    - valeu
+    - muito obrigado
+    - muito obrigada
+    - agradeço
+
+- intent: despedida
+  examples: |
+    - tchau
+    - até mais
+    - até logo
+    - falou
+    - adeus
+
+entities:
+- sabor
+- tamanho
+- borda
+- ingrediente

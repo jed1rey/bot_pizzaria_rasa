@@ -1,0 +1,102 @@
+version: "3.1"
+
+intents:
+  - saudacao
+  - despedida
+  - fazer_pedido
+  - informar_sabor_pizza
+  - informar_tamanho_pizza
+  - informar_tipo_borda
+  - informar_ingrediente_extra
+  - negar_ingrediente
+  - confirmar_pedido
+  - cancelar_pedido
+  - agradecer
+  - horario_funcionamento
+
+responses:
+  utter_saudacao:
+  - text: "Deseja fazer um pedido ou saber o horário de funcionamento?"
+
+  utter_horario:
+  - text: "Nosso horário de funcionamento é: segunda a domingo, das 11:00 às 23:00."
+
+  utter_quer_fazer_pedido:
+  - text: "Deseja fazer seu pedido agora? Se sim, digite 'pedido'."
+
+  utter_pedir_sabor:
+  - text: "Qual sabor você deseja?"
+
+  utter_pedir_tamanho:
+  - text: "Qual tamanho você deseja? Temos pequena, média e grande."
+
+  utter_pedir_borda:
+  - text: "Qual tipo de borda? Com borda recheada, borda vulcão, borda fina ou sem borda?"
+
+  utter_ask_ingrediente_extra:
+  - text: "Deseja adicionar algum ingrediente extra? Se sim, diga qual (ex: milho, bacon). Se não, responda 'não'."
+
+  utter_ingrediente_registrado:
+  - text: "Ok, adicionei {ingrediente} ao pedido."
+
+  utter_no_ingrediente:
+  - text: "Certo, sem ingredientes extras."
+
+  utter_confirmar_pedido:
+  - text: "Seu pedido está correto? Uma pizza de {sabor} {tamanho} e o tipo de borda é {borda}?"
+
+  utter_cancelar_pedido:
+  - text: "Pedido cancelado. Se precisar de algo é só avisar."
+
+  utter_agradecer:
+  - text: "A Pizzaria agradece, aguardamos você novamente."
+
+  utter_despedida:
+  - text: "Até logo! Foi um prazer atender você."
+
+slots:
+  sabor:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: sabor
+
+  tamanho:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: tamanho
+
+  borda:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: borda
+
+  ingrediente:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: ingrediente
+
+  esperando_ingrediente:
+    type: bool
+    initial_value: false
+    mappings:
+      - type: custom
+
+entities:
+- sabor
+- tamanho
+- borda
+- ingrediente
+
+actions:
+- action_validar_sabor
+- action_validar_tamanho
+- action_ask_ingrediente
+- action_registrar_ingrediente_extra
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

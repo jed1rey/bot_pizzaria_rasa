@@ -1,0 +1,51 @@
+version: "3.1"
+
+stories:
+
+- story: fluxo pedido com ingrediente extra
+  steps:
+  - intent: saudacao
+  - action: utter_saudacao
+  - intent: fazer_pedido
+  - action: utter_pedir_sabor
+  - intent: informar_sabor_pizza
+  - action: action_validar_sabor
+  - action: utter_pedir_tamanho
+  - intent: informar_tamanho_pizza
+  - action: action_validar_tamanho
+  - action: utter_pedir_borda
+  - intent: informar_tipo_borda
+  - action: action_ask_ingrediente
+  - intent: informar_ingrediente_extra
+  - action: action_registrar_ingrediente_extra
+  - intent: confirmar_pedido
+  - action: utter_agradecer
+
+- story: fluxo pedido sem ingrediente extra
+  steps:
+  - intent: saudacao
+  - action: utter_saudacao
+  - intent: fazer_pedido
+  - action: utter_pedir_sabor
+  - intent: informar_sabor_pizza
+  - action: action_validar_sabor
+  - action: utter_pedir_tamanho
+  - intent: informar_tamanho_pizza
+  - action: action_validar_tamanho
+  - action: utter_pedir_borda
+  - intent: informar_tipo_borda
+  - action: action_ask_ingrediente
+  - intent: negar_ingrediente
+  - action: action_registrar_ingrediente_extra
+  - intent: confirmar_pedido
+  - action: utter_agradecer
+
+- story: fluxo horario -> pedido
+  steps:
+  - intent: saudacao
+  - action: utter_saudacao
+  - intent: horario_funcionamento
+  - action: utter_horario
+  - action: utter_quer_fazer_pedido
+  - intent: fazer_pedido
+  - action: utter_pedir_sabor
