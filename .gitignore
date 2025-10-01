@@ -22,4 +22,5 @@ __pycache__/
 
 # Rasa - resultados de treino
 results/
-models/*.tar.gz
+models/
+
