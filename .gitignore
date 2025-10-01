@@ -1,5 +1,25 @@
-"venv/" 
-".env" 
-"__pycache__/" 
-"*.pyc" 
-".DS_Store" 
+# Ambiente virtual
+venv/
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Logs e temporários
+*.log
+*.tmp
+*.swp
+
+# Configs de IDE
+.vscode/
+.idea/
+
+# Sistema
+.DS_Store
+
+# Rasa - resultados de treino
+results/
+models/*.tar.gz
